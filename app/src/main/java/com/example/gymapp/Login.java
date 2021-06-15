@@ -71,6 +71,8 @@ public class Login extends AppCompatActivity {
 
             Toast.makeText(this,"Login Success",Toast.LENGTH_SHORT).show();
         }
+        Intent intent = new Intent(this, firstpage.class);
+        startActivity(intent);
     }
 
     public void goToSignup(View v) {
