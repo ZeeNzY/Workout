@@ -1,13 +1,13 @@
 package com.example.gymapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Login extends AppCompatActivity {
 
@@ -69,14 +69,14 @@ public class Login extends AppCompatActivity {
             String email = etEmail.getText().toString();
             String password = etPassword.getText().toString();
 
-            Toast.makeText(this,"Login Success",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Login Success", Toast.LENGTH_SHORT).show();
         }
-        Intent intent = new Intent(this, firstpage.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 
     public void goToSignup(View v) {
-        Intent intent = new Intent(this, SignUp.class);
+        Intent intent = new Intent(this, AddActivity.class);
         startActivity(intent);
     }
 }
