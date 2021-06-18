@@ -26,7 +26,7 @@ public class AddActivity extends AppCompatActivity {
         add_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                com.jovanovic.stefan.sqlitetutorial.MyDatabaseHelper myDB = new com.jovanovic.stefan.sqlitetutorial.MyDatabaseHelper(com.jovanovic.stefan.sqlitetutorial.AddActivity.this);
+                MyDatabaseHelper myDB = new MyDatabaseHelper(AddActivity.this);
                 myDB.addBook(name_input.getText().toString().trim(),
                         email_input.getText().toString().trim(),
                         location_input.getText().toString().trim(),
