@@ -45,7 +45,7 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    void addBook(String name, String email, String location, String password, String repeatpassword){
+    void addMember(String name, String email, String location, String password, String repeatpassword){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
 
