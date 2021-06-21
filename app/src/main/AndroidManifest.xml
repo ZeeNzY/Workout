@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GymApp">
         <activity
-            android:name=".AddActivity"
+            android:name=".SignUp"
             android:parentActivityName=".OpenPage" />
         <activity
             android:name=".OpenPage"
