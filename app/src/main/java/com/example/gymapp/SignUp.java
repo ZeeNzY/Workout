@@ -7,7 +7,7 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class AddActivity extends AppCompatActivity {
+public class SignUp extends AppCompatActivity {
 
     EditText name_input, email_input, location_input, password_input, repeatpassword_input;
     Button add_button;
@@ -23,16 +23,18 @@ public class AddActivity extends AppCompatActivity {
         password_input = findViewById(R.id.et_password);
         repeatpassword_input = findViewById(R.id.et_repeat_password);
         add_button = findViewById(R.id.add_button);
-        add_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                MyDatabaseHelper myDB = new MyDatabaseHelper(AddActivity.this);
-                myDB.addMember(name_input.getText().toString().trim(),
-                        email_input.getText().toString().trim(),
-                        location_input.getText().toString().trim(),
-                        password_input.getText().toString().trim(),
-                        repeatpassword_input.getText().toString().trim());
-            }
-        });
     }
+
+    /***  add_button.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+    MyDatabaseHelper myDB = new MyDatabaseHelper(AddActivity.this);
+    myDB.addMember(name_input.getText().toString().trim(),
+    email_input.getText().toString().trim(),
+    location_input.getText().toString().trim(),
+    password_input.getText().toString().trim(),
+    repeatpassword_input.getText().toString().trim());
+    }
+    });
+     **/
 }

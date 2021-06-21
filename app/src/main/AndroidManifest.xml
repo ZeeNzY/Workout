@@ -10,9 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GymApp">
         <activity
-            android:name=".UpdateActivity"
-            android:parentActivityName=".OpenPage" />
-        <activity
             android:name=".AddActivity"
             android:parentActivityName=".OpenPage" />
         <activity
