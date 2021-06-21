@@ -27,8 +27,11 @@ public class SignUp extends AppCompatActivity {
         add_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                ClientModel clientModel;
+
                 try {
-                    ClientModel clientModel = new ClientModel(name.getText().toString(),
+                    clientModel = new ClientModel(name.getText().toString(),
                             email.getText().toString(),
                             location.getText().toString(),
                             password.getText().toString(),
@@ -37,9 +40,14 @@ public class SignUp extends AppCompatActivity {
                     Toast.makeText(SignUp.this, clientModel.toString(), Toast.LENGTH_SHORT).show();
                 } catch (Exception e) {
                     Toast.makeText(SignUp.this, "Error Creating client", Toast.LENGTH_SHORT).show();
+                    clientModel = new ClientModel("error", " ", " ", " ", "");
                 }
 
                 DatabaseHelper databaseHelper = new DatabaseHelper(SignUp.this);
+
+                boolean success = databaseHelper.addOne(clientModel);
+
+                Toast.makeText(SignUp.this, "Success " + success, Toast.LENGTH_SHORT).show();
 
             }
         });

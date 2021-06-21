@@ -51,6 +51,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         cv.put(COLUMN_PASSWORD, clientModel.getPassword());
         cv.put(COLUMN_REPEATPASSWORD, clientModel.getRepeatpassword());
 
-        return true;
+        long insert = db.insert(CLIENT_TABLE, null, cv);
+        if (insert == -1){
+            return false;
+        }
+        else {
+            return true;
+        }
     }
 }
