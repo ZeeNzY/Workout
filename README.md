@@ -1,2 +1,2 @@
 # Workout
-Android Studio appliaction
+Android Studio application
